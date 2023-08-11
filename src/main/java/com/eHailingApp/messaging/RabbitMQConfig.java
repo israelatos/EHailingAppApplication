@@ -49,7 +49,7 @@ public class RabbitMQConfig {
 
     @Bean
     public Binding bookingAddBinding(Queue bookingAddQueue, Exchange bookingExchange) {
-        return BindingBuilder.bind(bookingAddQueue).to(bookingExchange).with("booking.add");
+        return BindingBuilder.bind(bookingAddQueue).to(bookingExchange).with("booking.add").noargs();
     }
 
     @Bean
