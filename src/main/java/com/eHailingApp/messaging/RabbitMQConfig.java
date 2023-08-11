@@ -59,7 +59,7 @@ public class RabbitMQConfig {
 
     @Bean
     public Binding bookingEditBinding(Queue bookingEditQueue, Exchange bookingExchange) {
-        return BindingBuilder.bind(bookingEditQueue).to(bookingExchange).with("booking.edit");
+        return BindingBuilder.bind(bookingEditQueue).to(bookingExchange).with("booking.edit").noargs();
     }
 
     // Define beans for bookingDeleteQueue and bookingDeleteBinding similarly
